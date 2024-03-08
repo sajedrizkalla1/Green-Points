@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Yinka Enoch Adedokun" />
+  <meta name="description" content="Simple Forgot Password Page Using HTML and CSS" />
+  <meta name="keywords" content="forgot password page, basic html and css" />
+  <link rel="stylesheet" href="css/forget.css" />
+  <title>Forgot Password Page - HTML + CSS</title>
+  <style>
+    /* Initially hide the modal */
+    #myModal {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" class="row">
+    <h1>Forgot Password</h1>
+    <h6 class="information-text">
+      Enter your registered email to reset your password.
+    </h6>
+    <div class="form-group">
+      <h3 class="email-text">Email</h3>
+      <input type="email" id="user_email" placeholder="Enter Email" name="user_email" required />
+      <button type="submit" onclick="replaceContent()" id="continueBtn">
+        Continue
+      </button>
+    </div>
+  </div>
+
+  <div id="myModal" class="row">
+    <!-- Modal content goes here -->
+    <div class="modal-content">
+      <h1>Set Password</h1>
+      <h6 class="information-text">
+        Enter the verification number you recieved in mail and set your new
+        password.
+      </h6>
+      <div class="form-group">
+        <h3 class="email-text">Verify OTP</h3>
+        <input type="text" id="otp" placeholder="XXXXX" name="user_email" required />
+        <h3 class="email-text">New Password</h3>
+        <input type="password" id="newPassword" placeholder="new password" name="user_email" required />
+        <input type="hidden" id="email"  />
+        <button type="submit" id="reset">Reset Password</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById("myModal");
+
+
+
+    // Function to open the modal and create form elements
+    function replaceContent() {
+      var emailInput = document.getElementById("user_email").value;
+      if (!emailInput) {
+        alert("Please enter your email.");
+        return;
+      }
+      fetch('http://localhost:8000/api/auth/forgetPassword', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: emailInput }),
+      })
+        .then(response => {
+          if (response.ok) {
+
+            var contentDiv = document.getElementById("content");
+            contentDiv.style.display = "none"; // Hide the current content
+
+            // Remove the current content
+            while (contentDiv.firstChild) {
+              contentDiv.removeChild(contentDiv.firstChild);
+            }
+            var email = document.getElementById("email");
+            modal.style.display = "block"; // Show the modal
+
+            email.setAttribute('value', emailInput);
+          }
+          else {
+            alert("error when signup")
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // Handle errors here
+        });
+
+    }
+
+    function resetPassword() {
+      var email = document.getElementById("email").value;
+      var otp = document.getElementById("otp").value;
+      var newPassword = document.getElementById("newPassword").value;
+      fetch('http://localhost:8000/api/auth/resetPassword', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({email,otp,newPassword}),
+      })
+        .then(response => {
+          if (response.ok) {
+
+            window.location.href = 'index.html';
+          }
+          else {
+            alert("error when signup")
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // Handle errors here
+        });
+    }
+    var btn = document.getElementById("reset")
+    btn.addEventListener("click", resetPassword, false)
+    // Function to close the modal
+    //   function closeModal() {
+    //     modal.style.display = "none";
+    //   }
+
+    //   // Close the modal if the user clicks anywhere outside of it
+    //   window.onclick = function (event) {
+    //     if (event.target == modal) {
+    //       modal.style.display = "none";
+    //     }
+    //   };
+  </script>
+</body>
+
+</html>
