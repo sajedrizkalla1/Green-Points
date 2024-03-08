@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/volunteerSignup.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="sign_up_box">
+        <h1>Sign Up</h1>
+        <h3>sign up as an volunteer</h3>
+        <form id="signupForm">
+            <label>name</label>
+            <input type="text" name="name" placeholder="" required><br>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="" required><br>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="" required><br>
+            <label>Age</label>
+            <input type="number" name="age" placeholder="" required><br>
+            <label>Gender</label>
+            <div class="gender">
+
+                <input type="radio" id="male" value="male" required name="gender">
+                <label for="male" class="gn1">Male</label>
+            </div>
+            <div class="gender">
+
+                <input type="radio" id="female" value="female" required name="gender">
+                <label for="female" class="gn2">Female</label>
+            </div>
+            <div class="gender">
+
+                <input type="radio" id="other" value="other" required name="gender">
+                <label for="other" class="gn2">Other</label><br>
+            </div>
+            <button type="submit" class="bt2">Submit</button>
+        </form>
+        <p class="p_1">By clicking the submit button, you agree to our<br>
+            <a href="#">Terms and condition</a> and <a href="#">Policy and privacy</a>
+        </p>
+        <p class="p_2">Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const formProps = Object.fromEntries(formData);
+            formProps.isOrganizer = false;
+
+            fetch('http://localhost:8000/api/auth/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formProps),
+            })
+                .then(response => {
+                    if (response.ok) {
+
+                        window.location.href = 'index.html';
+                    }
+                    else {
+                        alert("error when signup")
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    // Handle errors here
+                });
+        });
+    </script>
+</body>
+
+</html>
