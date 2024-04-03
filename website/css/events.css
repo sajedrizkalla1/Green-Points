@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #025c1d;
+    --color-black-1: #1f5499;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+.search-wrapper {
+    flex-direction: column;
+    gap: .25rem;
+    position:relative;
+    align-items: center;
+}
+.search-wrapper input{
+    width: 600px;
+}
+.logo {
+        color: green;
+        font-size: 30px;
+}
+      
+.logo span {
+        color: white;
+}
+      
+.menu-bar {
+        background-color: var(--color-black);
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+
+}
+
+
+input {
+    font-size: 1.2rem;
+}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    gap:  .25rem;
+    margin-top: 1rem;
+}
+
+.card{
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+} 
+
+.card > .body{
+    font-size: .8rem;
+    color: #777;
+}
+
+.hide{
+    display: none;
+}
+
+body {
+  background-image: url(../images/projectimg3.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.slide{
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    background-color: #fff;
+    transition: 0.5s ease;
+    transform: translateX(-180px);
+}
+h1{
+    color: rgb(1, 119, 1);
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    color: #011a01;
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+ul li:hover a{
+    color: #fff;
+    background-color: rgb(1, 107, 1) ;
+}
+ul li a i{
+    width: 40px;
+    text-align: center;
+}
+.in1{
+    display: none;
+    visibility: hidden;
+}
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(10, 112, 10);
+    border-radius: 50 px;
+    transition: 0.3s ease;
+}
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+input:checked ~ .slide{
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.container
+{
+    border: 2px solid #333;
+    padding: 3px 10px;
+    width: 600px;
+    background-color:rgb(184, 233, 218);
+    height: 100vh;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+ 
+.container h2
+{
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+textarea
+{
+    height: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    margin-bottom: 10px;
+    resize: none;
+    outline: none;
+}
+
+.comment-b[type="submit"],button
+{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comment-b[type="submit"]
+{
+    color: #fff;
+    background-color: #4f65a0;
+}
+
+button
+{
+    color: #333;
+    background-color: transparent;
+} 
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid rgb(10, 5, 5);
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(236, 225, 225);
+    width: 500px;
+    max-width: 80%;
+  }
+  
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+.modal-body {
+    padding: 10px 15px;
+  }
+  
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+.descriptionP{
+    padding: 12px 15px;
+  }
+.Confirm-B {
+    color: #f8f5f5;
+    background-color: #4f65a0;
+    border-radius: 5px;
+
+  }
+.btn1{
+    align-items: center;
+    margin-right: 10px;
+    color: rgb(5, 4, 4);
+    border: 1px solid rgb(8, 6, 6);
+    border-radius: 10px;
+    background-color: #f7faf9;
+  }
+  .btn3{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .titleP{
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+  .ep {
+    margin-left: 10px;
+    word-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
+    white-space: normal; /* Ensures that the whitespace is handled normally, allowing wrapping */
+  }
+  
+  
+  .box1{
+    border: 3px solid rgb(245, 242, 242);
+    border-color: black;
+    border-radius: 10px;
+    height: 400px;
+    margin-top: 40px;
+    width: 400px;
+    background-color:rgb(184, 233, 218);
+    margin-left: 5px;
+  }
+  .box2{
+    border: 3px solid rgb(245, 242, 242);
+    border-color: black;
+    border-radius: 10px;
+    height: 400px;
+    margin-top: 40px;
+    width: 400px;
+    margin-left: 50px;
+    background-color:aliceblue;
+
+  }
+  .box3{
+    border: 3px solid rgb(245, 242, 242);
+    border-color: black;
+    border-radius: 10px;
+    height: 400px;
+    margin-top: 40px;
+    width: 400px;
+    background-color:aliceblue;
+
+  }
+  .box4{
+    border: 3px solid rgb(245, 242, 242);
+    border-color: black;
+    border-radius: 10px;
+    height: 400px;
+    margin-top: 40px;
+    width: 400px;
+    margin-left: 50px;
+    background-color:rgb(184, 233, 218);
+
+  }
+  .box12{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .box34{
+    display: flex;
+    margin-left: 30px;
+  }
+  .Aplly-b{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4f65a0;
+    margin-left: 5px;
+  }
+
+  .eventsContainer {
+    /* background-image: url(../images/projectimg3.webp);
+    background-repeat: no-repeat;
+    background-size: cover; Cover the entire area */
+    flex-grow: 1; /* Allows the container to grow and fill the space */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh; /* Minimum height to cover the viewport */
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between; /* This will place .eventsContainer and .container side by side */
+    width: 100%;
+  }
+
+  .applied-message {
+    color: #4CAF50; /* Example green color for success messages */
+    margin-top: 10px;
+}
+
+.event-details{
+  margin-top:40px;
+
+}
+.event-details input{
+  margin-left: 20px;
+}
+
+.commentButtons{
+  margin-bottom: 40px;
+}
+
+.comment-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-text {
+  margin: 0;
+  flex-grow: 1; /* Ensures the text takes up available space, pushing the button to the right */
+}
+
+.delete-comment {
+  margin-left: 20px; /* Adds some space between the text and the button */
+}
