@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UFT-8">
+  <meta http-equiv="x-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/events.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="./js/events/script.js" defer></script>
+  <script defer src="./js/events/script1.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <label>
+    <input class="in1" type="checkbox">
+    <div class="toggle">
+      <span class="top_line common "></span>
+      <span class="middle_line common"></span>
+      <span class="bottom_line common"></span>
+    </div>
+
+
+    <div class="slide">
+      <h1>MENU</h1>
+      <ul>
+        <li><a href="profile.html"><i class="far fa-user"></i> Private Page</a></li>
+        <li><a href="#"><i class="far fa-address-book"></i> Events</a></li>
+        <li><a href="index.html" id="logout"><i class="bx bx-log-out icon"></i> Log Out</a></li>
+      </ul>
+
+    </div>
+  </label>
+  <div class="menu-bar">
+    <h1 class="logo">Green<span>Points.</span></h1>
+    <div class="search-wrapper">
+      <input type="search" id="search" data-search placeholder="Search Projects...">
+
+    </div>
+
+
+    <!-- <button class="btn1"  data-modal-target="#modal">+</button> -->
+    <div class="addButtonContainer"></div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">
+          <p>Add a event</p>
+        </div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        Event name :
+        <input type="Project Name" id="ProjectName"><br><br>
+        Adress :
+        <input type="text" id="ProjectAdress" placeholder="Enter address"><br><br>
+        Time of meeting :
+        <input type="datetime-local" id="TimeMeting"><br><br>
+        Max Capacity :
+        <input type="Cpacity" id="maxCapacity">
+      </div>
+      <div class="descriptionP">
+        description :
+        <input type="description" id="description"> <br>
+        <div class="btn3">
+          <input class="Confirm-B" type="submit" value="Confirm">
+          <button>Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </div>
+  <div class="user-cards" data-user-card-container></div>
+  <!-- <template data-user-template>
+    <div class="card">
+      <div class="header" data-header></div>
+      <div class="body" data-body></div>
+    </div>
+  </template> -->
+  <div class="content-wrapper">
+    <div class="eventsContainer">
+      <div class="box12">
+        <!-- <div class="box1">
+          <h2 class="titleP">Event name : cleaning stess</h2>
+          <h3 class="ep">Adress :</h3>
+          <h3 class="ep">Max Capacity : </h3>
+          <h3 class="ep">currentCapacity :</h3>
+          <h3 class="ep">Time :</h3>
+          <h3 class="ep">description : </h3>
+          <div class="btn2">
+            <input class="Aplly-b" type="submit" value="Aplly">
+            <button>Cancel</button>
+          </div>
+        </div> -->
+
+      </div>
+      <div class="container">
+        <h2>Add Comment</h2>
+        <form id="comment-form">
+          <textarea id="comment-text" placeholder="Add your comment..."></textarea>
+          <div class="btn commentButtons">
+            <input class="comment-b" type="submit" value="Comment">
+            <button type="button" id="cancel-comment">Cancel</button>
+          </div>
+        </form>
+        <div id="comments-container">
+          <!-- Comments will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>
