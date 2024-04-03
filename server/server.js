@@ -4,7 +4,7 @@ const port = process.env.PORT || 8000;
 const { authRouter } = require("./routers/authRouter");
 const { infoLogger, errorLogger } = require("./logs/logs");
 const { commentRouter } = require("./routers/commentRouter");
-
+const { usersRouter } = require("./routers/usersRouter");
 
 app.use((req, res, next) => {
     console.log(req.method);
@@ -26,12 +26,12 @@ app.use(corsConfig);
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
-app.use('/api/comments', commentRouter);
 
 
 app.use('/api/auth', authRouter);
-
-
+app.use(authJwt.verifyToken);
+app.use('/api/users', usersRouter);
+app.use('/api/comments', commentRouter);
 app.use((req, res) => {
     errorLogger.error(`Bad Method Request!:${req.method} ${req.url}`);
     res.status(404).json({ "message": "Bad Method Request!" });
