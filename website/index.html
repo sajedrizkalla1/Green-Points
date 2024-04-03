@@ -1,71 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" contect="IE=edge">
-    <meta name="viewport" content="width-device-width,initial-scale=1.0">
-    <title>Login GreenPoints Web</title>
-    <link rel="stylesheet" href="css/loginPagestyle.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>dropdown Menu</title>
   </head>
   <body>
-    <div class="wrapper">
-      <form id="loginForm">
-        <h1>Login</h1>
-      <div class="input-box">
-        <input type="text" name="email" placeholder="Enter Email" required>
-        <i class='bx bxs-user'></i>
-      </div>
-<br>
-            <div class="input-box">
-                <input type="password" name="password" placeholder="Enter Password" required>
-                <i class='bx bxs-lock-alt'></i>
-    </div>
-<br>
-      <div class="remember-forgot">
-                <br><a href="forget.html">forget password?</a>
-        </div>  
-<br><button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <br>
-                <p>Create account for volunteer?<a href="volunteer.html">click here</a></p>
-                <br>
-                <p>Create account for organizer?<a href="organizer.html">click here</a></p>
-      </div>
-</form>
-    </div>
-    <script>
-      document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const formProps = Object.fromEntries(formData);
+    <div class="menu-bar">
+      <h1 class="logo">Green<span>Points.</span></h1>
+      <ul>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="#">Sign up <i class="fas fa-caret-down"></i></a>
 
-            fetch('http://localhost:8000/api/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formProps),
-            })
-            .then(response => {
-                if (response.ok) {
-                    
-                    let data = response.json()
-                    console.log('Success:', data);
-                    // Save login response data to localStorage
-                    localStorage.setItem('userData', JSON.stringify(data));
-                    // Redirect to main.html
-                    window.location.href = 'main.html';
-                }
-                else{
-                    alert("wrong email or password")
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                // Handle errors here, e.g., show an error message to the user
-            });
-        });
-    </script>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="organizer.html">Sign up orginizer</a></li>
+                  <li><a href="volunteer.html">Sign up volunteer</a></li>
+
+                </ul>
+              </div>
+        </li>
+      </ul>
+    </div>
+    <h1 class="title1">Welcome to the website </h1>
+
+    <img  class ="img1" src="images/4553450.jpg">
+      <h1 class="p3">About the website:</h1>
+      <h1 class="p1"><p> Determine the goal and message of the site.
+      Highlighting the key environmental issues that the projects aim to address.
+       It features attractive images to preserve the environment.</p>
+      
+      <br><br><p >Goals and objectives of environmental development projects, to obtain a better environment.<p></p><br></h1>
+      
+      <footer><h1 class="p2">Events:</h1></footer><br><br>
+      
+    <h1 class="p1"><p>On the projects page, we display the various environmental development projects in which the organization participates.<br>
+      Includes a detailed description of each project, highlighting objectives, methodologies and results.</p>
+      
+    <p>Encouraging visitors to participate in environmental projects or initiatives.<br><img class="img2" src="images/environment-1.png">
+      Providing volunteer and contribution options.</p><br>
+    <p>Additionally, there is a call-to-action button or form for users to register for projects or events.
+       The website contains updates on environmental issues, projects and events.</p>
+      
+      Includes a contact form for users to submit comments.</h1>
+
   </body>
 </html>
