@@ -4,6 +4,7 @@ const port = process.env.PORT || 8000;
 const { authRouter } = require("./routers/authRouter");
 const { infoLogger, errorLogger } = require("./logs/logs");
 const { commentRouter } = require("./routers/commentRouter");
+const { eventsRouter } = require("./routers/eventsRouter");
 const { usersRouter } = require("./routers/usersRouter");
 
 app.use((req, res, next) => {
@@ -31,6 +32,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/api/auth', authRouter);
 app.use(authJwt.verifyToken);
 app.use('/api/users', usersRouter);
+app.use('/api/events', eventsRouter);
 app.use('/api/comments', commentRouter);
 app.use((req, res) => {
     errorLogger.error(`Bad Method Request!:${req.method} ${req.url}`);
