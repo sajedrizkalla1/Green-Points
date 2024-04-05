@@ -35,7 +35,7 @@ let allEvents = [];
 document.addEventListener('DOMContentLoaded', async () => {
   const user = JSON.parse(localStorage.getItem('userData'));
   if (!user) {
-    window.location.href = '/website/index.html';
+    window.location.href = 'index.html';
   }
   loadComments();
   // Check if the user is an organizer and append "Add Event" button if true
@@ -502,5 +502,5 @@ document.getElementById('logout').addEventListener('click', function(e) {
   // localStorage.removeItem('userData'); // Uncomment if you prefer to remove specific item
 
   // Redirect to index.html or your landing page
-  window.location.href = '/website/index.html';
+  window.location.href = 'index.html';
 });

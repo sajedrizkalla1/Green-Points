@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (!userData) {
-        window.location.href = '/website/index.html';
+        window.location.href = 'index.html';
     }
     if (userData) {
         console.log("userData",userData);
@@ -204,5 +204,5 @@ document.getElementById('logout').addEventListener('click', function(e) {
     // localStorage.removeItem('userData'); // Uncomment if you prefer to remove specific item
   
     // Redirect to index.html or your landing page
-    window.location.href = '/website/index.html';
+    window.location.href = 'index.html';
   });

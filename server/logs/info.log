@@ -31,3 +31,10 @@
 {"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 06:49:22 PM +0300"}
 {"level":"info","message":"Event created successfully: 66101d81ebd50679ab35d0be","timestamp":"2024-04-05 06:49:22 PM +0300"}
 {"level":"info","message":"Event deleted successfully: 66101d81ebd50679ab35d0b8","timestamp":"2024-04-05 06:49:27 PM +0300"}
+{"level":"info","message":"Express server is running on port 8000","timestamp":"2024-04-05 09:58:04 PM +0300"}
+{"level":"info","message":"DB connected","timestamp":"2024-04-05 09:58:06 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 09:58:57 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:00:30 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:02:22 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:02:37 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:02:51 PM +0300"}
