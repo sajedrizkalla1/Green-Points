@@ -22,3 +22,12 @@
 {"level":"info","message":"DB connected","timestamp":"2024-03-08 07:11:17 AM +0200"}
 {"level":"info","message":"Express server is running on port 8000","timestamp":"2024-03-08 01:15:39 PM +0200"}
 {"level":"info","message":"DB connected","timestamp":"2024-03-08 01:15:43 PM +0200"}
+{"level":"info","message":"Express server is running on port 8000","timestamp":"2024-04-05 06:45:49 PM +0300"}
+{"level":"info","message":"DB connected","timestamp":"2024-04-05 06:45:53 PM +0300"}
+{"level":"info","message":"Comment deleted successfully: 123","timestamp":"2024-04-05 06:47:29 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 06:48:23 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 06:48:36 PM +0300"}
+{"level":"info","message":"Event created successfully: 66101d81ebd50679ab35d0b8","timestamp":"2024-04-05 06:49:21 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 06:49:22 PM +0300"}
+{"level":"info","message":"Event created successfully: 66101d81ebd50679ab35d0be","timestamp":"2024-04-05 06:49:22 PM +0300"}
+{"level":"info","message":"Event deleted successfully: 66101d81ebd50679ab35d0b8","timestamp":"2024-04-05 06:49:27 PM +0300"}

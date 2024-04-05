@@ -11,7 +11,7 @@ exports.commentsController = {
             const savedComment = await newComment.save();
             res.json(savedComment);
         } catch (err) {
-            console.error(err);
+            errorLogger.error(err);
             res.status(500).send('Server error');
         }
     },
@@ -21,7 +21,7 @@ exports.commentsController = {
             const comments = await Comment.find();
             res.json(comments);
         } catch (err) {
-            console.error(err);
+           errorLogger.error(err);
             res.status(500).send('Server error');
         }
     },

@@ -6,6 +6,8 @@ const { infoLogger, errorLogger } = require("./logs/logs");
 const { commentRouter } = require("./routers/commentRouter");
 const { eventsRouter } = require("./routers/eventsRouter");
 const { usersRouter } = require("./routers/usersRouter");
+const authJwt = require('./middlewares/authJwt');
+
 
 app.use((req, res, next) => {
     console.log(req.method);
