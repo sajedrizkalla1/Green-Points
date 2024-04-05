@@ -1,0 +1,4 @@
+{"level":"error","timestamp":"2024-04-05 06:47:29 PM +0300"}
+{"level":"error","timestamp":"2024-04-05 06:47:29 PM +0300"}
+{"level":"error","message":"Comment not found: 123","timestamp":"2024-04-05 06:47:29 PM +0300"}
+{"level":"error","message":"Error deleting comment: Error: Database error","timestamp":"2024-04-05 06:47:29 PM +0300"}

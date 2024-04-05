@@ -162,7 +162,7 @@ exports.authController = {
                 });
             })
             .catch(err => {
-                console.error(err);
+               errorLogger.error(err);
                 res.status(500).json({ "message": "Error finding user" });
             });
     },
@@ -188,7 +188,7 @@ exports.authController = {
                 });
             })
             .catch(err => {
-                console.error(err);
+               errorLogger.error(err);
                 res.status(500).json({ "message": "Error resetting password" });
             });
     }
