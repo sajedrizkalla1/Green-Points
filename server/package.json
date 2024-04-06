@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BaderDak0/GreenPoints-backend.git"
+    "url": "git+https://github.com/sajedrizkalla1/Green-Points.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BaderDak0/GreenPoints-backend/issues"
+    "url": "https://github.com/sajedrizkalla1/Green-Points/issues"
   },
-  "homepage": "https://github.com/BaderDak0/GreenPoints-backend#readme",
+  "homepage": "https://github.com/sajedrizkalla1/Green-Points",
   "dependencies": {
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
