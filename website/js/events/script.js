@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     // Adjust the fetch URL to your actual API endpoint
     console.log("user", user);
-    const url = `http://localhost:8000/api/events`;
+    const url = `https://green-points-fe682babb5dc.herokuapp.com/api/events`;
     const response = await fetch(url, {
       headers: {
         'x-access-token': user.accessToken, // Include the token if user is logged in
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     try {
-      const url = `http://localhost:8000/api/events`;
+      const url = `https://green-points-fe682babb5dc.herokuapp.com/api/events`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -223,7 +223,7 @@ function displayEvents(events) {
         try {
           const userId = user._id; // Assuming your user object has an _id field
           const eventId = event._id; // Assuming your event object has an _id field
-          const url = `http://localhost:8000/api/events/apply/${eventId}/${userId}`;
+          const url = `https://green-points-fe682babb5dc.herokuapp.com/api/events/apply/${eventId}/${userId}`;
 
           const response = await fetch(url, {
             method: 'POST',
@@ -266,7 +266,7 @@ function displayEvents(events) {
         }
 
         try {
-          const url = `http://localhost:8000/api/events/${event._id}`; // Use the correct event ID
+          const url = `https://green-points-fe682babb5dc.herokuapp.com/api/events/${event._id}`; // Use the correct event ID
           const response = await fetch(url, {
             method: 'DELETE',
             headers: {
@@ -326,7 +326,7 @@ function displayEvents(events) {
           };
 
           try {
-            const url = `http://localhost:8000/api/events/${event._id}`;
+            const url = `https://green-points-fe682babb5dc.herokuapp.com/api/events/${event._id}`;
             const response = await fetch(url, {
               method: 'PUT',
               headers: {
@@ -395,7 +395,7 @@ document.getElementById('comment-form').addEventListener('submit', async (e) => 
 
   // Assuming you have an API endpoint to submit a new comment
   try {
-    const url = `http://localhost:8000/api/comments`;
+    const url = `https://green-points-fe682babb5dc.herokuapp.com/api/comments`;
 
     const response = await fetch(url, {
       method: 'POST',
@@ -428,7 +428,7 @@ document.getElementById('cancel-comment').addEventListener('click', () => {
 
 async function loadComments() {
   try {
-      const url = `http://localhost:8000/api/comments`;
+      const url = `https://green-points-fe682babb5dc.herokuapp.com/api/comments`;
       const user = JSON.parse(localStorage.getItem('userData'));
       const response = await fetch(url, {
           headers: {
@@ -473,7 +473,7 @@ async function loadComments() {
 
 async function deleteComment(commentId) {
   try {
-      const url = `http://localhost:8000/api/comments/${commentId}`;
+      const url = `https://green-points-fe682babb5dc.herokuapp.com/api/comments/${commentId}`;
       const user = JSON.parse(localStorage.getItem('userData'));
       const response = await fetch(url, {
           method: 'DELETE',

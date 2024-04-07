@@ -50,7 +50,7 @@
             const formProps = Object.fromEntries(formData);
             formProps.isOrganizer = true;
 
-            fetch('http://localhost:8000/api/auth/signup', {
+            fetch('https://green-points-fe682babb5dc.herokuapp.com/api/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

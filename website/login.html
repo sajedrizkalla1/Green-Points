@@ -52,7 +52,7 @@
             const formData = new FormData(event.target);
             const formProps = Object.fromEntries(formData);
 
-            fetch('http://localhost:8000/api/auth/login', {
+            fetch('https://green-points-fe682babb5dc.herokuapp.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

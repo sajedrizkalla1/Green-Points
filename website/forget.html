@@ -63,7 +63,7 @@
         alert("Please enter your email.");
         return;
       }
-      fetch('http://localhost:8000/api/auth/forgetPassword', {
+      fetch('https://green-points-fe682babb5dc.herokuapp.com/api/auth/forgetPassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +100,7 @@
       var email = document.getElementById("email").value;
       var otp = document.getElementById("otp").value;
       var newPassword = document.getElementById("newPassword").value;
-      fetch('http://localhost:8000/api/auth/resetPassword', {
+      fetch('https://green-points-fe682babb5dc.herokuapp.com/api/auth/resetPassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

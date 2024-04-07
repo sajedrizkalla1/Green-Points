@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault(); // Prevent default form submission
         const user = JSON.parse(localStorage.getItem('userData'));
         const userId = user.id; // Assuming the user's ID is stored in userData
-        const url = `http://localhost:8000/api/users/${userId}/updateUser`;
+        const url = `https://green-points-fe682babb5dc.herokuapp.com/api/users/${userId}/updateUser`;
     
         const updatedUserData = {
             name: document.querySelector('input[name="username"]').value,
