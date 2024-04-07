@@ -2,3 +2,10 @@
 {"level":"error","timestamp":"2024-04-05 06:47:29 PM +0300"}
 {"level":"error","message":"Comment not found: 123","timestamp":"2024-04-05 06:47:29 PM +0300"}
 {"level":"error","message":"Error deleting comment: Error: Database error","timestamp":"2024-04-05 06:47:29 PM +0300"}
+{"level":"error","timestamp":"2024-04-06 09:29:41 PM +0300"}
+{"level":"error","timestamp":"2024-04-06 09:29:41 PM +0300"}
+{"level":"error","message":"Comment not found: 123","timestamp":"2024-04-06 09:29:41 PM +0300"}
+{"level":"error","message":"Error deleting comment: Error: Database error","timestamp":"2024-04-06 09:29:41 PM +0300"}
+{"level":"error","message":"Missing Parameters Please send all Parameters ","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"error","message":"Error Getting user from db:Error: Illegal arguments: string, undefined","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"error","timestamp":"2024-04-06 09:29:42 PM +0300"}

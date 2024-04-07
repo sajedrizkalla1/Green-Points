@@ -38,3 +38,38 @@
 {"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:02:22 PM +0300"}
 {"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:02:37 PM +0300"}
 {"level":"info","message":"Fetched all future events","timestamp":"2024-04-05 10:02:51 PM +0300"}
+{"level":"info","message":"Express server is running on port 8000","timestamp":"2024-04-06 09:28:30 PM +0300"}
+{"level":"info","message":"DB connected","timestamp":"2024-04-06 09:28:32 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-06 09:29:05 PM +0300"}
+{"level":"info","message":"Comment deleted successfully: 123","timestamp":"2024-04-06 09:29:41 PM +0300"}
+{"level":"info","message":"Get all Users","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Success to Get all users","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Get User id:1","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Delete a user","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Deleting user no:1 is successfully","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Add Activity to user 1","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Event event1 added to user 1's volunteer events successfully","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Organizer signup","timestamp":"2024-04-06 09:29:42 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-06 10:54:24 PM +0300"}
+{"level":"info","message":"Event created successfully: 6611a881ecea3892704a211f","timestamp":"2024-04-06 10:54:41 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-06 10:54:42 PM +0300"}
+{"level":"info","message":"Event deleted successfully: 6611a881ecea3892704a211f","timestamp":"2024-04-06 10:55:53 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-06 10:57:52 PM +0300"}
+{"level":"info","message":"Event created successfully: 6611a953ecea3892704a212a","timestamp":"2024-04-06 10:58:11 PM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-06 10:58:12 PM +0300"}
+{"level":"info","message":"Event deleted successfully: 6611a953ecea3892704a212a","timestamp":"2024-04-06 10:59:26 PM +0300"}
+{"level":"info","message":"Express server is running on port 8000","timestamp":"2024-04-07 11:01:14 AM +0300"}
+{"level":"info","message":"DB connected","timestamp":"2024-04-07 11:01:15 AM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-07 11:01:29 AM +0300"}
+{"level":"info","message":"Express server is running on port 8000","timestamp":"2024-04-07 11:28:21 AM +0300"}
+{"level":"info","message":"DB connected","timestamp":"2024-04-07 11:28:22 AM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-07 11:40:07 AM +0300"}
+{"level":"info","message":"Event created successfully: 66125c0502f6fe202f974bec","timestamp":"2024-04-07 11:40:37 AM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-07 11:40:37 AM +0300"}
+{"level":"info","message":"Event created successfully: 66125c1e02f6fe202f974bf2","timestamp":"2024-04-07 11:41:03 AM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-07 11:41:03 AM +0300"}
+{"level":"info","message":"Event created successfully: 66125c4202f6fe202f974bf8","timestamp":"2024-04-07 11:41:38 AM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-07 11:41:39 AM +0300"}
+{"level":"info","message":"Event updated successfully: 66125c4202f6fe202f974bf8","timestamp":"2024-04-07 11:41:49 AM +0300"}
+{"level":"info","message":"Fetched all future events","timestamp":"2024-04-07 11:41:54 AM +0300"}
+{"level":"info","message":"Event deleted successfully: 66125c4202f6fe202f974bf8","timestamp":"2024-04-07 11:42:41 AM +0300"}
